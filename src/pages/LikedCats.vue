@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import MyHeader from './components/MyHeader.vue';
-import CatList from './components/CatList.vue';
-import myLocalStorage from "./localStorage.js";
+import MyHeader from '../components/MyHeader.vue';
+import CatList from '../components/CatList.vue';
+import myLocalStorage from "../localStorage.js";
 
 export default {
     components:{
@@ -24,8 +24,8 @@ export default {
         return{
             cats: myLocalStorage.getData(),
             links: [
-                {title: "Main", href:"./index.html"},
-                {title: "Liked", href:"./liked-cats.html"},
+                {title: "Main", href:"/"},
+                {title: "Liked", href:"/liked"},
             ],
         }
     },

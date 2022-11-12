@@ -3,9 +3,9 @@
         <div class="header__container container">
             <h1 class="header__logo">{{logo}}</h1>
             <nav class="header__nav nav">
-                <a :href="link.href" class="nav__link" v-for="link in links" :key="link.href">
+                <router-link :to="link.href" class="nav__link" v-for="link in links" :key="link.href">
                     {{link.title}}
-                </a>
+                </router-link>
             </nav>
         </div>
     </header>
