@@ -11,7 +11,9 @@
                     <div class="cat-item__btns-group">
                         <my-button
                         @click="$emit('onLikeClick',cat)"
-                        class="cat-item__like">{{cat.isLiked ? "Liked" : "Like"}}</my-button>
+                        class="cat-item__like"
+                        :class="{liked : cat.isLiked}"
+                        >{{cat.isLiked ? "Liked" : "Like"}}</my-button>
                         <my-button
                         @click="onDislikeClick"
                         class="cat-item__dislike">Dislike</my-button>
@@ -44,7 +46,6 @@ export default {
     box-shadow: 0 0 5px black;
     padding: 8px;
     border-radius: 8px;
-
 }
 .fade{
     animation: fade 1s;
@@ -88,6 +89,9 @@ export default {
 }
 .cat-item__btns-group>*:not(:last-child){
     margin: 0 10px 0 0;
+}
+.btn.liked{
+    background-color: #E5989B;
 }
 @media(max-width: 769px){
     .cat-item__body{

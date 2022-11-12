@@ -4,7 +4,8 @@
         v-for="cat in cats" 
         :cat="cat" 
         :key="cat.id"
-        @onDislikeClick="$emit('onDislikeClick', cat)"/>
+        @onDislikeClick="$emit('onDislikeClick', cat)"
+        @onLikeClick="$emit('onLikeClick', cat)"/>
     </div>
 </template>
 

@@ -40,4 +40,7 @@ export default {
 .nav>*:not(:last-child){
     margin-right: 10px;
 }
+.nav__link{
+    font-weight: 700;
+}
 </style>

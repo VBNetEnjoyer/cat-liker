@@ -17,5 +17,16 @@ export default {
     background: none;
     font-size: inherit;
     padding: 8px 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/* .btn:hover{
+    top: -2px;
+    left: -2px;
+} */
+.btn:active{
+    top: 2px;
+    left: 2px;
 }
 </style>
