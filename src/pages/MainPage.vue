@@ -1,34 +1,27 @@
 <template>
-    <my-header :logo="'Cat Liker'" :links="links"/>
     <div class="container" v-if="catsLoaded">
         <cat-list 
         :cats="cats"
         @onDislikeClick="deleteCat" 
         @onLikeClick="likeCat"
         />
-
     </div>
     <loader v-else/>
 </template>
 
 <script>
-import MyHeader from '../components/MyHeader.vue';
-import CatList from '../components/CatList.vue';
+
+import CatList from '@/components/CatList.vue';
 import { faker } from '@faker-js/faker';
-import myLocalStorage from "../localStorage.js";
+import myLocalStorage from "@/localStorage.js";
 
 export default {
     components:{
-        MyHeader, CatList,
+        CatList,
     },
     data(){
         return{
-            links: [
-                {title: "Main", href:"./"},
-                {title: "Liked", href:"./liked"},
-            ],
             cats:[],
-            
         }
     },
     methods:{

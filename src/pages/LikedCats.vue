@@ -1,5 +1,4 @@
 <template>
-    <my-header :logo="'Cat Liker'" :links="links"/>
     <div class="container" v-if="cats.length > 0">
         <cat-list 
         :cats="cats"
@@ -12,21 +11,16 @@
 </template>
 
 <script>
-import MyHeader from '../components/MyHeader.vue';
-import CatList from '../components/CatList.vue';
-import myLocalStorage from "../localStorage.js";
+import CatList from '@/components/CatList.vue';
+import myLocalStorage from "@/localStorage.js";
 
 export default {
     components:{
-        MyHeader, CatList,
+        CatList,
     },
     data(){
         return{
             cats: myLocalStorage.getData(),
-            links: [
-                {title: "Main", href:"/"},
-                {title: "Liked", href:"/liked"},
-            ],
         }
     },
     methods:{

@@ -1,10 +1,23 @@
 <template>
+    <my-header :logo="'Cat Liker'" :links="links"/>
     <router-view></router-view>
 </template>
 
 <script>
-export default {
+import MyHeader from '@/components/MyHeader.vue';
 
+export default {
+    components:{
+        MyHeader
+    },
+    data(){
+        return{
+            links: [
+                {title: "Main", href:"./"},
+                {title: "Liked", href:"./liked"},
+            ],
+        }
+    }
 }
 </script>
 
